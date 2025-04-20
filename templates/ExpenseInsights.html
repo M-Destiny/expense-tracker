@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Expense Insights{% endblock %}
+
+{% block content %}
+<div class="insights-page">
+    <h1>Your Monthly Insights</h1>
+    
+    <!-- Pie Chart Section -->
+    <div class="chart-section">
+        <h2>Category Breakdown</h2>
+        <img src="{{ url_for('static', filename='images/pie_chart.png') }}" alt="Spending Pie Chart">
+    </div>
+    
+    <!-- Bar Graph Section -->
+    <div class="chart-section">
+        <h2>Monthly Trends</h2>
+        <img src="{{ url_for('static', filename='images/bar_graph.png') }}" alt="Monthly Spending">
+    </div>
+    
+    <!-- Back Button -->
+    <a href="/" class="btn">⬅ Back to Expenses</a>
+</div>
+{% endblock %}

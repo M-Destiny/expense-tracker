@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Expense Tracker{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index_style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Expense Tracker</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/insights">Insights</a>
+            <a href="/logout">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- This is where the page-specific content will be rendered -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Expense Tracker. All rights reserved.</p>
+    </footer>
+</body>
+</html>

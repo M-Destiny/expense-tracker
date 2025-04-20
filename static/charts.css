@@ -1,0 +1,41 @@
+/* Bar Analytics Specific Styles */
+.time-filter {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.time-filter button {
+    padding: 8px 16px;
+    margin: 0 5px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.time-filter button:hover {
+    background: #45a049;
+}
+
+.expense-data {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.expense-data th, .expense-data td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.expense-data th {
+    background-color: #f2f2f2;
+}
+
+.chart-img-container {
+    margin: 20px auto;
+    max-width: 800px;
+    overflow-x: auto;
+}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Spending Trends{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="/static/charts.css">
+{% endblock %}
+
+{% block content %}
+<div class="chart-container">
+    <h1>Your Spending Trends</h1>
+    
+    <!-- Time-Period Selector -->
+    <div class="time-filter">
+        <form method="GET" action="/bar-analytics">
+            <button type="submit" name="range" value="weekly">Weekly</button>
+            <button type="submit" name="range" value="monthly">Monthly</button>
+            <button type="submit" name="range" value="yearly">Yearly</button>
+        </form>
+    </div>
+
+    <!-- Generated Bar Graph -->
+    <div class="chart-img-container">
+        <img src="/static/images/bar_graph_{{ range }}.png" 
+             alt="Expense Bar Chart" 
+             onerror="this.src='/static/images/bar_graph_default.png'">
+    </div>
+
+    <!-- Data Table -->
+    <table class="expense-data">
+        <tr>
+            <th>Period</th>
+            <th>Amount</th>
+        </tr>
+        {% for period, amount in data %}
+        <tr>
+            <td>{{ period }}</td>
+            <td>₹{{ amount }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

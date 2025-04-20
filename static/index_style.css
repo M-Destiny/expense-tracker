@@ -1,0 +1,379 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #e1dfdf;
+    color: #333;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header-left h1 {
+    color: #318CE7;
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+.header-left p {
+    color: #515050;
+    font-size: 1.0rem;
+}
+
+.logout-btn {
+    background-color: #318CE7;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+
+
+/* Summary Section */
+.summary-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.budget-left, .budget-center{
+    flex: 1;
+   
+}
+.budget-right {
+    flex: 1;
+    color: rgb(25, 186, 25)
+}
+
+.budget-center form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.budget-center input {
+    padding: 8px;
+    margin: 5px 0;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.budget-center button {
+    padding: 8px 16px;
+    background-color: #318CE7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.budget-center button:hover {
+    background-color: #318CE7;
+}
+
+/* Add Expense Section */
+.add-expense {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.add-expense h3 {
+    color: #318CE7;
+    margin-bottom: 15px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.add-expense button {
+    padding: 10px 20px;
+    background-color: #318CE7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.add-expense button:hover {
+    background-color: #2a7bc8;
+}
+
+
+/* Recent Expenses Section */
+.recent-expenses {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.recent-expenses h3 {
+    color: #318CE7;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+/* Expense ID Column */
+
+td:nth-child(1) {
+    width: 100px;
+    word-break: keep-all;
+}
+
+/* Description Column */
+
+td:nth-child(2) {
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.right-align {
+    text-align: right;
+}
+
+a {
+    color: #318CE7;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #2a7bc8;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .summary-section {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .budget-left, .budget-center, .budget-right {
+        text-align: center;
+    }
+    
+    .budget-center form {
+        align-items: center;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: auto; /* Allows columns to expand */
+    }
+    .recent-expenses {
+        overflow-x: auto; /* Enables horizontal scrolling if needed */
+    }
+    
+    th:nth-child(1),
+    td:nth-child(1) {
+        width: 80px;
+    }
+}
+/* Add these new styles to your CSS */
+/* Button styling */
+.insights-button {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.insights-button .btn {
+    background: #2a7bc8;;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.insights-button .btn:hover {
+    background: #45a049;
+}
+
+/* ===== CATEGORY COLORS ===== */
+
+
+/* Category Pill Base Style */
+.category-pill {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(5px);
+}
+
+/* Specific Category Colors */
+.category-food {
+    background-color: #ffd900; /* Gold */
+    color: #111111;
+    font-family: cursive;
+}
+
+.category-entertainment {
+    background-color: #e3589e; /* Pink */
+    color: #111111;
+    font-family: cursive;
+}
+
+.category-transportation {
+    background-color: #48aac2; /* Steel Blue */
+    color: #111111;
+    font-family: cursive;
+}
+
+.category-utilities {
+    background-color: #75c222; /* Lime Green */
+    color: #111111;
+    font-family: cursive;
+}
+
+.category-housing {
+    background-color: rgb(221, 87, 221); /* Purple */
+    color: #111111;
+    font-family: cursive;
+}
+
+.category-healthcare {
+    background-color: #ee3f20; /* Tomato Red */
+    color: #111111;
+    font-family: cursive;
+}
+
+.category-shopping {
+    background-color: #e78404e7; /* Orange */
+    color: #111111;
+    font-family: cursive;
+}
+
+.category-other {
+    background-color: #A9A9A9; /* Gray */
+    color: #111111;
+    font-family: cursive;
+}
+
+/* For the Groceries option in your select */
+.category-groceries {
+    background-color: #FFD700; /* Same as Food */
+    color: #111111;
+    font-family: cursive;
+}
+
+/* For the Bills option in your select */
+.category-bills {
+    background-color: hsl(117, 71%, 51%); /* Same as Other */
+    color: #111111;
+    font-family: cursive;
+}
+
+/* Left-aligned Search Bar */
+.search-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin-left: auto; /* Pushes form to the right */
+}
+
+.search-form input[type="date"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 180px;
+}
+
+.search-form button {
+    padding: 8px 16px;
+    background-color: #318CE7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
